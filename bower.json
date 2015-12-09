@@ -1,0 +1,18 @@
+{
+  "name": "GuyLandingPage",
+  "homepage": "https://github.com/Guy-Koren/FastLandBeta",
+  "authors": [
+    "Tomer Rosenfeld <tomerosenfeld007@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
