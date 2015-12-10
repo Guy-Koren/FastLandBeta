@@ -12,33 +12,31 @@ app.controller('MainController', function ($mdSidenav, $scope, $mdToast) {
         },
         {
             name: "סניפים",
-            view: "views/about"
+            view: "views/branches"
         },
         {
             name: "התוכנית",
-            view: "views/about"
+            view: "views/plan"
         },
         {
             name: "כלים ומבחנים",
-            view: "views/about"
-        },
-        {
-            name: "השלמת בגרויות",
-            view: "views/about"
+            view: "views/testsandtools"
         },
         {
             name: "כתבות וטיפים",
-            view: "views/about"
+            view: "views/articles"
         },
         {
             name: "חידות",
-            view: "views/about"
+            view: "views/fun"
         },
         {
             name: "צור קשר",
-            view: "views/about"
+            view: "views/contact"
         }
     ];
+    $scope.views.reverse();
+    $scope.tabs = jQuery.extend({}, $scope.views);
     $scope.views.reverse();
     $scope.showSimpleToast = function (text) {
         $mdToast.show(

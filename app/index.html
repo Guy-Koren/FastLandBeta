@@ -11,6 +11,7 @@
     <script src="../bower_components/angular-aria/angular-aria.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!--My JS files-->
     <script src="scripts/main.js"></script>
     <!--My CSS files-->
@@ -20,8 +21,8 @@
 
 <div ng-cloak>
     <md-content>
-        <md-tabs md-dynamic-height md-swipe-content md-stretch-tabs="always" md-selected="7" >
-            <md-tab dir="rtl" ng-repeat="view in views" ng-click="showSimpleToast(view.name)" label="{{view.name}}">
+        <md-tabs md-dynamic-height md-swipe-content md-stretch-tabs="always" md-selected="6" >
+            <md-tab dir="rtl" ng-repeat="view in tabs" ng-click="showSimpleToast(view.name)" label="{{view.name}}">
 
             </md-tab>
         </md-tabs>

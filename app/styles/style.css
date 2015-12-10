@@ -1,4 +1,28 @@
 .view{
-    height: 1000px;
-    max-height: 100vh;
+    height: 65vh;
+}
+
+.placeholder{
+    height:100%;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.gray{
+    background-color: gray;
+}
+.yellow{
+    background-color: yellow;
+}
+.pink{
+    background-color: pink;
+}
+.teal{
+    background-color: teal;
+}
+.blue{
+    background-color: blue;
 }
