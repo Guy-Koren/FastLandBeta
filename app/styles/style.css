@@ -1,9 +1,12 @@
 .view{
     height: 65vh;
 }
-
 .placeholder{
     height:100%;
+    text-align: center;
+    font-size: x-large;
+    color: #ffffff;
+    padding-top: 15%;
 }
 .red{
     background-color: red;
@@ -15,9 +18,11 @@
     background-color: gray;
 }
 .yellow{
+    color: #000000;
     background-color: yellow;
 }
 .pink{
+    color: #000000;
     background-color: pink;
 }
 .teal{
