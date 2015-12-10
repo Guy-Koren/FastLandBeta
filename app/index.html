@@ -21,11 +21,10 @@
 
 <div ng-cloak>
     <md-content>
-        <md-tabs md-dynamic-height md-swipe-content md-stretch-tabs="always" md-selected="6" id="tabs" >
-            <md-tab dir="rtl" ng-repeat="tab in tabs" ng-click="goToByScroll(tab.id)" label="{{tab.name}}">
-
-            </md-tab>
-        </md-tabs>
+        <md-toolbar layout="row" class="md-whiteframe-6dp toolbar">
+            <div layout="row" layout-align="center center" class="md-toolbar-tools" dir="rtl" ng-repeat="tab in tabs"  label="{{tab.name}}">
+                <md-button class="nav-button" ng-click="goToByScroll(tab.id)">{{tab.name}}</md-button>
+            </div>
     </md-content>
     <div ng-repeat="view in views">
         <div class="view" ng-include="view.view+'.html'"></div>
