@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Guy Koren</title>
+
+
+    <!--Angular Material-->
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <!--My JS files-->
+    <script src="scripts/main.js"></script>
+    <!--My CSS files-->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body ng-controller="MainController" ng-app="GuyLanding">
+
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-swipe-content md-stretch-tabs="always" md-selected="7" >
+            <md-tab dir="rtl" ng-repeat="view in views" ng-click="showSimpleToast(view.name)" label="{{view.name}}">
+
+            </md-tab>
+        </md-tabs>
+    </md-content>
+    <div ng-repeat="view in views">
+        <div class="view" ng-include="view.view+'.html'"></div>
+    </div>
+</div>
 
 </body>
 </html>

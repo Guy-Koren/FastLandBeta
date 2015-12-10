@@ -1,10 +1,10 @@
 {
-  "name": "GuyLandingPage",
+  "name": "Guy Landing Page",
   "homepage": "https://github.com/Guy-Koren/FastLandBeta",
   "authors": [
     "Tomer Rosenfeld <tomerosenfeld007@gmail.com>"
   ],
-  "description": "",
+  "description": "Guy Koren's landing page",
   "main": "",
   "moduleType": [],
   "license": "MIT",
