@@ -7,18 +7,24 @@ app.directive('bar', function () {
     };
 });
 app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $log) {
+    $scope.scrollTo = function (id) {
+        document.getElementsByClassName(id)[0].scrollIntoView();
+    };
     $scope.tabs = [
         {
-            title: "אודות"
+            title: "אודות",
+            id: "about"
         },
         {
-            title: "סניפים"
+            title: "סניפים",
+            id: "branches"
         },
         {
             title: "צור קשר"
         },
         {
-            title: "חומרי למידה"
+            title: "חומרי למידה",
+            id: "stuff"
         },
         {
             title: "דרושים"
@@ -50,8 +56,8 @@ app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $lo
     $scope.tabs2 = new Array();
     var half = 100;
     for (var i = 0; true; i++) {
-        if (i >= half ) {
-            if($scope.tabs[half]!= null) {
+        if (i >= half) {
+            if ($scope.tabs[half] != null) {
                 $scope.tabs2.push($scope.tabs[half]);
                 $scope.tabs.splice(half, 1)
                 console.log(i);
@@ -63,11 +69,11 @@ app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $lo
         if ($scope.tabs[i] != null) {
             if ($scope.tabs[i].icon && half == 100) {
                 half = i;
-                console.log("half = "+i)
+                console.log("half = " + i)
                 $scope.tabs.splice(i, 1)
             }
         }
-        if(i==origSize){
+        if (i == origSize) {
             break
         }
     }

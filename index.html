@@ -6,137 +6,176 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animate.css">
+
 </head>
 <body ng-app="GuyKoren" ng-controller="AppController">
 
 <div layout-align="start center" layout="column" style="overflow: visible">
     <bar></bar>
-    <img src="img/header.png" class="section banner">
-    <hr flex/>
-    </span>
-    <div class="section about" layout-align="start center" layout="row" dir="rtl">
-        <img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg" class="profile">
-        <br>
-        <div layout="column" class="about_content">
-            <md-content>
-                <h1 class="red_title">אודות</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis
-                    conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix
-                    sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius
-                    in, eam praesent reformidans no. Sed laudem aliquam ne.
-                </p>
-            </md-content>
-            <a href="#" class="black_anchor">קרא עוד</a>
+    <div class="content animated bounceInUp">
+        <img src="img/header.png" class="section banner">
+        <div class="section about" layout-align="start center" layout="row" dir="rtl">
+            <img src="http://korenguy.com/wp-content/uploads/2013/03/%D7%92%D7%99%D7%90-%D7%A7%D7%95%D7%A8%D7%9F1.png"
+                 class="profile">
+            <br>
+            <div layout="column" class="about_content">
+                <md-content>
+                    <h1 class="red_title">אודות</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis
+                        conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At
+                        vix
+                        sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem
+                        lucilius
+                        in, eam praesent reformidans no. Sed laudem aliquam ne.
+                    </p>
+                </md-content>
+                <a href="#" class="black_anchor">קרא עוד</a>
+            </div>
         </div>
-    </div>
-    <div class="section branches" layout="row" layout-align="start start" style="height: 320px">
-        <iframe src="https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98" width="70%"
-                height="320"></iframe>
-        <div layout="column" layout-align="start start" dir="rtl" style="width: 30%">
-            <h1 dir="rtl">סניפים</h1>
-            <h3>סניף 1 - בלה בלה</h3>
-            <h3>סניף 1 - בלה בלה</h3>
-            <h3>סניף 1 - בלה בלה</h3>
-            <h3>סניף 1 - בלה בלה</h3>
+        <hr class="cool_hr" flex/>
+        <div class="section branches" layout="row" layout-align="start start" style="height: 320px; margin-bottom: 0">
+            <!--   <iframe src="https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98" width="70%"
+                       height="320"></iframe>-->
+            <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')" src="img/map.png" style="width: 70%;height: 100%;  object-fit: cover;">
+            <div layout="column" layout-align="start start" dir="rtl" style="width: 30%">
+                <h1 dir="rtl">סניפים</h1>
+                <h3 class="no_margin_h3">סניף 1 - בלה בלה</h3>
+                <h3 class="no_margin_h3">סניף 2 - בלה בלה</h3>
+                <h3 class="no_margin_h3">סניף 3 - בלה בלה</h3>
+                <h3 class="no_margin_h3">סניף 4 - בלה בלה</h3>
+            </div>
         </div>
-    </div>
 
-    <div class="section bagrut red_background">
-        <div layout="column" layout-align="start center">
-            <h1 class="yellow_title">השלמת בגרויות</h1>
+        <div class="section bagrut red_background" style="margin-top: 0">
+            <div layout="column" layout-align="start center">
+                <h1 class="yellow_title">השלמת בגרויות</h1>
+            </div>
+            <div layout="row" layout-align="center center">
+                <p class="white_text text_content">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
+            </div>
+            <div layout="row" layout-align="center start">
+                <a href="#" class="white_anchor">קרא עוד</a>
+            </div>
         </div>
-        <div layout="row" layout-align="center center">
-            <p class="white_text text_content">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
+
+        <div class="section plans">
+            <div layout="column" layout-align="start center">
+                <h1 style="color: #8B8E90">תוכנית לחטיבה ותיכון</h1>
+            </div>
+            <div layout="row" layout-align="center start">
+                <div style="width: 50%">
+                    <md-grid-list
+                            md-cols="2"
+                            md-row-height="2:2"
+                            md-gutter="12px" md-gutter-gt-sm="8px">
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#2: (1r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#3: (1r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#4: (2r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#4: (2r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+                </div>
+            </div>
         </div>
-        <div layout="row" layout-align="center start">
-            <a href="#" class="white_anchor">קרא עוד</a>
+
+        <div class="section plans_pre">
+            <div layout="column" layout-align="start center">
+                <h1 style="color: #B1A057">תוכנית לחטיבה ותיכון</h1>
+            </div>
+            <div layout="row" layout-align="center start">
+                <div style="width: 80%">
+                    <md-grid-list
+                            md-cols="3"
+                            md-row-height="2:2"
+                            md-gutter="12px" md-gutter-gt-sm="8px">
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#2: (1r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#3: (1r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#4: (2r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#4: (2r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#2: (1r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                        <md-grid-tile class="plans_item">
+                            <md-grid-tile-footer>
+                                <h3>#3: (1r x 1c)</h3>
+                            </md-grid-tile-footer>
+                        </md-grid-tile>
+                    </md-grid-list>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="section plans">
-        <div layout="column" layout-align="start center">
-            <h1 style="color: #8B8E90">תוכנית לחטיבה ותיכון</h1>
+
+        <div class="section gallery gray_background">
+            <div layout="column" layout-align="start center">
+                <h1 class="red_title">גלריית ספרים</h1>
+            </div>
+            <div layout="row" layout-align="center center">
+                <p class="white_text text_content">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
+            </div>
+            <div layout="row" layout-align="center start">
+                <a href="#" class="white_anchor">קרא עוד</a>
+            </div>
         </div>
-        <div layout="row" layout-align="center start">
-            <div style="width: 50%">
-                <md-grid-list
-                        md-cols="2"
-                        md-row-height="2:2"
-                        md-gutter="12px" md-gutter-gt-sm="8px">
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#2: (1r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#3: (1r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#4: (2r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#4: (2r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                </md-grid-list>
+
+        <div class="section stuff red_background">
+            <div layout="column" layout-align="start center">
+                <h1 class="yellow_title">חומרי למידה</h1>
+            </div>
+            <div layout="row" layout-align="center center">
+                <p class="white_text text_content">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
+            </div>
+            <div layout="row" layout-align="center start">
+                <a href="#" class="white_anchor">קרא עוד</a>
             </div>
         </div>
     </div>
-
-    <div class="section plans_pre">
-        <div layout="column" layout-align="start center">
-            <h1 style="color: #B1A057">תוכנית לחטיבה ותיכון</h1>
-        </div>
-        <div layout="row" layout-align="center start">
-            <div style="width: 80%">
-                <md-grid-list
-                        md-cols="3"
-                        md-row-height="2:2"
-                        md-gutter="12px" md-gutter-gt-sm="8px">
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#2: (1r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#3: (1r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#4: (2r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#4: (2r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#2: (1r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                    <md-grid-tile class="plans_item">
-                        <md-grid-tile-footer>
-                            <h3>#3: (1r x 1c)</h3>
-                        </md-grid-tile-footer>
-                    </md-grid-tile>
-                </md-grid-list>
-            </div>
-        </div>
-    </div>
-
 </div>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
