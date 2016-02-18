@@ -10,6 +10,7 @@ app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $lo
     $scope.scrollTo = function (id) {
         document.getElementsByClassName(id)[0].scrollIntoView();
     };
+
     $scope.tabs = [
         {
             title: "אודות",
@@ -82,4 +83,5 @@ app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $lo
         $scope.$apply();
     }, 150)
 
-});
+})
+;

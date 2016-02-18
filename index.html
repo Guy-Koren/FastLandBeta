@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animate.css">
+    <link rel="icon"
+          type="image/png"
+          href="img/logo.png">
 
 </head>
 <body ng-app="GuyKoren" ng-controller="AppController">
 
-<div layout-align="start center" layout="column" style="overflow: visible">
-    <bar></bar>
-    <div class="content animated bounceInUp">
+<div layout-align="start center" layout="column" style="overflow: visible" id="main_wrapper">
+    <bar ng-show="bigScreen"></bar>
+    <div class="content md-whiteframe-24dp animated slideInUp" ng-style="bigScreen ? {'margin-top': '22vh'}:{'margin-top': '0'}">
         <img src="img/header.png" class="section banner">
         <div class="section about" layout-align="start center" layout="row" dir="rtl">
             <img src="http://korenguy.com/wp-content/uploads/2013/03/%D7%92%D7%99%D7%90-%D7%A7%D7%95%D7%A8%D7%9F1.png"
@@ -31,15 +34,15 @@
                         in, eam praesent reformidans no. Sed laudem aliquam ne.
                     </p>
                 </md-content>
-                <a href="#" class="black_anchor">קרא עוד</a>
+                <a href="#" class="black_anchor read_more">קרא עוד</a>
             </div>
         </div>
         <hr class="cool_hr" flex/>
         <div class="section branches" layout="row" layout-align="start start" style="height: 320px; margin-bottom: 0">
             <!--   <iframe src="https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98" width="70%"
                        height="320"></iframe>-->
-            <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')" src="img/map.png" style="width: 70%;height: 100%;  object-fit: cover;">
-            <div layout="column" layout-align="start start" dir="rtl" style="width: 30%">
+            <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')" src="img/map.png" style="width: 70% !important;height: 100%;  object-fit: cover;">
+            <div layout="column" layout-align="start start" dir="rtl" style="width: 30% !important;max-height: 320px;overflow: visible;">
                 <h1 dir="rtl">סניפים</h1>
                 <h3 class="no_margin_h3">סניף 1 - בלה בלה</h3>
                 <h3 class="no_margin_h3">סניף 2 - בלה בלה</h3>
@@ -60,7 +63,7 @@
                     vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
             </div>
             <div layout="row" layout-align="center start">
-                <a href="#" class="white_anchor">קרא עוד</a>
+                <a href="#" class="white_anchor read_more">קרא עוד</a>
             </div>
         </div>
 
@@ -156,7 +159,7 @@
                     vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
             </div>
             <div layout="row" layout-align="center start">
-                <a href="#" class="white_anchor">קרא עוד</a>
+                <a href="#" class="white_anchor read_more">קרא עוד</a>
             </div>
         </div>
 
@@ -172,7 +175,7 @@
                     vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
             </div>
             <div layout="row" layout-align="center start">
-                <a href="#" class="white_anchor">קרא עוד</a>
+                <a href="#" class="white_anchor read_more">קרא עוד</a>
             </div>
         </div>
     </div>

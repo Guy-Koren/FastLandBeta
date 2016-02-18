@@ -1,10 +1,10 @@
 <div class="bar_wrapper md-whiteframe-5dp" ng-controller="BarController" layout="row">
-        <div ng-repeat="tab in tabs" layout="row" layout-align="center start" class="bar_content_wrapper"
+        <div ng-repeat="tab in tabs" layout="row" layout-align="center start" class="bar_content_wrapper animated slideInLeft"
              style="width: 45%">
             <a href="" ng-click="tab.id != null ? scrollTo(tab.id) : null" class="tab">{{tab.title}}</a>
         </div>
-        <img class="logo" src="img/logo.png">
-        <div ng-repeat="tab in tabs2" layout="column" style="width: 45%" layout-align="start center" class="bar_content_wrapper">
+        <img class="logo animated slideInDown" src="img/logo.png" >
+        <div ng-repeat="tab in tabs2" layout="column" style="width: 45%" layout-align="start center" class="bar_content_wrapper animated slideInRight ">
             <a href="" ng-click="tab.id != null ? scrollTo(tab.id) : null" class="tab">{{tab.title}}</a>
         </div>
 </div>

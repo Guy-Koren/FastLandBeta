@@ -9,5 +9,7 @@ var app = angular.module('GuyKoren', ['ngMaterial']).config(function($mdThemingP
 });
 
 app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet,$mdMedia) {
-
+    $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(big) {
+        $scope.bigScreen = big;
+    });
 });
