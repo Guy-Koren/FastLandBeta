@@ -1,51 +1,91 @@
-.logo{
+.logo {
     height: 12%;
     width: 10%;
 }
-.tab{
+
+.tab {
+    font-size: 1vw;
     text-align: center;
     padding-right: 10px;
     padding-left: 10px;
-    width:100%;
-    display:block;
+    width: 100%;
+    display: block;
     text-decoration: none;
 }
 
-.section{
+.section {
     margin-bottom: 4%;
     width: 1199px;
     max-width: 100vw;
 }
 
-.about_content{
+.about_content {
     margin-right: 4%;
 }
-.about{
+
+.about {
     padding-left: 4%;
     padding-right: 4%;
 }
 
-.branches{
+.branches {
     margin-bottom: 5px;
     padding-right: 4%;
 }
 
-
-.profile{
+.profile {
     width: 150px;;
 }
-.banner{
+
+.banner {
 }
-.plans{
+
+.plans {
     margin-bottom: 0;
     padding-bottom: 20px;
     background-color: #000000;
 }
-.plans_item{
+
+.plans_item {
     background-color: white;
 }
-.plans_pre{
+
+.plans_pre {
     padding-bottom: 20px;
     margin-bottom: 0;
     background: #1A3042;
+}
+
+.red_title {
+    font-weight: bolder;
+    color: #87162C;
+}
+
+.black_anchor {
+    font-size: 1vw;
+    color: #000;
+    font-weight: bolder;
+}
+.white_anchor {
+    font-size: 1vw;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.yellow_title{
+    color: #FFDA63;
+}
+.red_background{
+    background-color: #87162C;
+}
+.white_text{
+    color: #ffffff;
+}
+.bagrut{
+    margin-bottom: 0;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+.text_content{
+    text-align: center;
+    direction: rtl;
 }
