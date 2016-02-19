@@ -52,7 +52,7 @@
 }
 
 .plans_item {
-    background-color: white;
+
 }
 
 .plans_pre {
@@ -155,4 +155,11 @@ body .main_wrapper{
 
 .read_more{
     font-size: 2vh;
+}
+
+.plans_item_img{
+    color: white;
+    width: 10vh;
+    height: 10vh;
+
 }
