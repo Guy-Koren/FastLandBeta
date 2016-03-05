@@ -87,6 +87,10 @@
     background-color: #87162C;
 }
 
+.blue_background{
+    background-color: #1A3042;
+}
+
 .white_text {
     color: #ffffff;
 }
@@ -114,6 +118,12 @@
     padding-bottom: 5vh;
     padding-top: 5vh;
     background-color: #87162C;
+}
+
+.school{
+    margin-bottom: 0;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
 }
 
 .bar_wrapper {
