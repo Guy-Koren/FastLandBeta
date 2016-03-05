@@ -146,20 +146,34 @@
     border-top: 2px solid #87162C;
     padding: 0;
 }
-.no_margin_h3{
+
+.no_margin_h3 {
+    margin-top: 8px;
     margin-bottom: 0;
 }
-body .main_wrapper{
+
+body .main_wrapper {
     background-color: #FAFAFA;
 }
 
-.read_more{
+.read_more {
     font-size: 2vh;
 }
 
-.plans_item_img{
+.plans_item_img {
     color: white;
     width: 10vh;
     height: 10vh;
 
+}
+
+.grid_3 {
+    width: 5%;
+    height: auto;
+}
+
+h3 {
+    text-align: right;
+    align-content: center;
+    direction: rtl;
 }

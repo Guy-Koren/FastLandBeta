@@ -27,15 +27,24 @@
                 <md-content>
                     <h1 class="red_title">אודות</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis
-                        conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At
-                        vix
-                        sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem
-                        lucilius
-                        in, eam praesent reformidans no. Sed laudem aliquam ne.
+                        גיא קורן Academy הוקמה על ידי גיא קורן מורה ומהנדס למעלה מעשור בתחומי הפיזיקה והמתמטיקה. לגיא
+                        נסיון בלימוד בתיכונים ציבוריים ופרטיים, בתוכניות הצטיינות ובתוכניות קידום נוער בסיכון. מתוך
+                        הנסיון הרב שרכש גיא נבנתה שיטה הנותנת כלים יישומיים המאפשרים לתלמיד יכולת לימוד עצמאית ללא תלות
+                        במורה פרטי. השיטה מקנה כלים לפיתוח היזמות האישית ויישום הכלים המתמטיים בתחומי החיים השונים.
+                    </p>
+                    <p ng-show="extra_about">
+                        אל גיא חברו צוות מורים מנוסה בעל זיקה ללמידה משמעותית המחוייב להעצמה של הלומד. סניפי גיא קורן
+                        פזורים במרכז הארץ בשכונת המשתלה בתל אביב, במרכזי נוער בראשון לציון, ובית ספר להישגים ייחודי
+                        בשיתוף פעולה עם בית ספר לטניס שר בחולון. בכל מרכז מוצעים מסלולים שונים וייחודיים ביניהם מסגרת
+                        בסגנון בתי ספר פרטיים בארה"ב לשעות הצהריים בה יקבלו תלמידי כיתות ה-ח שיעורי עזר חוגים והעשרה
+                        אקדמית ברמה הגבוהה ביותר, בנוסף במשתלה קיימת לימודיה, קבוצות לימוד קטנות ושיעורים פרטיים. ראשון
+                        לציון קיימים שלושה מרכזים בהם פועלת תוכנית שנתית ייחודית המלווה תלמידי חטיבת ביניים ותיכון
+                        להצלחה במבחנים במהלך השנה ובמבחני הבגרות . בחולון הוקם פרוייקט ראשון מסוגו בארץ המשלב למידה של
+                        מקצועות המתמטיקה והאנגלית עם פעילויות ספורט שונות ומרכז למידה הפועל בשעות הצהריים ונותן מענה
+                        חודשי מלא לתלמיד.
                     </p>
                 </md-content>
-                <a href="#" class="black_anchor read_more">קרא עוד</a>
+                <a href="" class="black_anchor read_more" ng-click="toggleAboutExtra()">קרא עוד</a>
             </div>
         </div>
         <hr class="cool_hr" flex/>
@@ -47,10 +56,8 @@
             <div layout="column" layout-align="start start" dir="rtl"
                  style="width: 30% !important;max-height: 320px;overflow: visible;">
                 <h1 dir="rtl">סניפים</h1>
-                <h3 class="no_margin_h3">סניף 1 - בלה בלה</h3>
-                <h3 class="no_margin_h3">סניף 2 - בלה בלה</h3>
-                <h3 class="no_margin_h3">סניף 3 - בלה בלה</h3>
-                <h3 class="no_margin_h3">סניף 4 - בלה בלה</h3>
+                <h3 ng-repeat="braunch in braunches" class="no_margin_h3">{{braunch}}</h3>
+
             </div>
         </div>
 
@@ -59,14 +66,11 @@
                 <h1 class="yellow_title">השלמת בגרויות</h1>
             </div>
             <div layout="row" layout-align="center center">
-                <p class="white_text text_content">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
+                <p class="white_text text_content">השלמת בגרויות B.A.BLE – השלמת בגרויות בכיתות קטנות עם צוות מורים
+                    מעולה הנותן יחס אישי לכל תלמיד </p>
             </div>
             <div layout="row" layout-align="center start">
-                <a href="#" class="white_anchor read_more">קרא עוד</a>
+                <a href="" class="white_anchor read_more">קרא עוד</a>
             </div>
         </div>
 
@@ -84,28 +88,28 @@
                             <md-icon md-svg-src="img/book.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
                             <md-grid-tile-footer>
-                                <h3>#2: (1r x 1c)</h3>
+                                <h3>שיעורים פרטיים</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
                         <md-grid-tile class="plans_item">
                             <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
                             <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
+                                <h3>שיעורים בקבוצות</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
                         <md-grid-tile class="plans_item">
                             <md-icon md-svg-src="img/book.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
                             <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
+                                <h3>הכנה לבגרויות</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
                         <md-grid-tile class="plans_item">
                             <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
                             <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
+                                <h3>מרתונים</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
                     </md-grid-list>
@@ -123,46 +127,11 @@
                             md-cols="3"
                             md-row-height="2:2"
                             md-gutter="12px" md-gutter-gt-sm="8px">
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/book.svg" style="color: #ffffff;"
+                        <md-grid-tile class="plans_item" ng-repeat="plan in plans">
+                            <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/person.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/person.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>#3: (1r x 1c)</h3>
+                            <md-grid-tile-footer layout-align="center center">
+                                <h3>{{plan.text}}</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
                     </md-grid-list>
@@ -174,16 +143,16 @@
             <div layout="column" layout-align="start center">
                 <h1 class="red_title">גלריית ספרים</h1>
             </div>
-            <div layout="row" layout-align="center center">
-                <p class="white_text text_content">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
-            </div>
-            <div layout="row" layout-align="center start">
-                <a href="#" class="white_anchor read_more">קרא עוד</a>
-            </div>
+            <md-grid-list
+                    md-cols="4"
+                    md-row-height="4:5.5"
+            >
+                <md-grid-tile class="plans_item" ng-repeat="book in books">
+                    <img ng-src="img/{{book}}.png" style="width: 95%">
+                </md-grid-tile>
+            </md-grid-list>
+
+
         </div>
 
         <div class="section stuff red_background">
