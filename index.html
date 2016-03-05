@@ -84,35 +84,13 @@
                             md-cols="2"
                             md-row-height="2:2"
                             md-gutter="12px" md-gutter-gt-sm="8px">
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/book.svg" style="color: #ffffff;"
+                        <md-grid-tile class="plans_item" ng-repeat="plan in plans2">
+                            <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>שיעורים פרטיים</h3>
+                            <md-grid-tile-footer layout-align="center center">
+                                <h3>{{plan.text}}</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>שיעורים בקבוצות</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/book.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>הכנה לבגרויות</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                        <md-grid-tile class="plans_item">
-                            <md-icon md-svg-src="img/people.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
-                            <md-grid-tile-footer>
-                                <h3>מרתונים</h3>
-                            </md-grid-tile-footer>
-                        </md-grid-tile>
-                    </md-grid-list>
                 </div>
             </div>
         </div>
@@ -145,14 +123,11 @@
             </div>
             <md-grid-list
                     md-cols="4"
-                    md-row-height="4:5.5"
-            >
+                    md-row-height="4:5.5">
                 <md-grid-tile class="plans_item" ng-repeat="book in books">
                     <img ng-src="img/{{book}}.png" style="width: 95%">
                 </md-grid-tile>
             </md-grid-list>
-
-
         </div>
 
         <div class="section stuff red_background">

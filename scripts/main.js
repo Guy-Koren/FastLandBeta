@@ -44,5 +44,23 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet,$mdM
             text: "קורס הכנה לחטיבת הביניים",
             icon: "people"
         }
+    ];
+    $scope.plans2 = [
+        {
+            text: "שיעורים פרטיים",
+            icon: "oneonone"
+        },
+        {
+            text: "שיעורים בקבוצות",
+            icon: "business"
+        },
+        {
+            text: "הכנה לבגרויות",
+            icon: "document"
+        },
+        {
+            text: "מרתונים",
+            icon: "man"
+        }
     ]
 });
