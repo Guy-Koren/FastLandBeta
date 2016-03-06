@@ -48,16 +48,15 @@
             </div>
         </div>
         <hr class="cool_hr" flex/>
-        <div class="section branches" layout="row" layout-align="start start" style="height: 320px; margin-bottom: 0">
+        <div class="section branches" layout="row" layout-align="start start" style="height: 420px; margin-bottom: 0">
             <!--   <iframe src="https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98" width="70%"
                        height="320"></iframe>-->
             <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')"
                  src="img/map.png" style="width: 70% !important;height: 100%;  object-fit: cover;">
             <div layout="column" layout-align="start start" dir="rtl"
-                 style="width: 30% !important;max-height: 320px;overflow: visible;">
+                 style="width: 30% !important;max-height: 420px;overflow: visible;">
                 <h1 dir="rtl">סניפים</h1>
-                <h3 ng-repeat="braunch in braunches" class="no_margin_h3">{{braunch}}</h3>
-
+                <h3 ng-repeat="braunch in braunches" class="no_margins_h3" ng-class="{'braunch_title':braunch.title}">{{braunch.text}}</h3>
             </div>
         </div>
 
@@ -76,7 +75,7 @@
 
         <div class="section plans">
             <div layout="column" layout-align="start center">
-                <h1 style="color: #8B8E90">תוכנית לחטיבה ותיכון</h1>
+                <h1 style=" color: #8B8E90">תוכנית לחטיבה ותיכון</h1>
             </div>
             <div layout="row" layout-align="center start">
                 <div style="width: 50%">
@@ -135,7 +134,8 @@
                 <h1 class="yellow_title">חומרי למידה</h1>
             </div>
             <div layout="row" layout-align="center center">
-                <p class="white_text text_content" style="padding-left: 10%;padding-right: 10%">kamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
+                <p class="white_text text_content" style="padding-left: 10%;padding-right: 10%">kamsdklfdsklajklvnjslfj
+                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
                     vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
                     vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
                     vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
@@ -146,15 +146,18 @@
             </div>
         </div>
 
-        <div class="section school blue_background">
+        <div class="section school " style="overflow: hidden">
             <div layout="column" layout-align="start center">
                 <h1 class="yellow_title">בית ספר להישגים</h1>
             </div>
             <div layout="row" layout-align="center center">
-                <p class="white_text text_content" style="padding-right: 10%;padding-left: 10%">בית ספר להישגים הוקם כמיזם סטארט-אפ חינוכי ע"י גיא קורן, אילן ורועי שר.
-                    המיזם מציע לראשונה בישראל  תוכניות ייחודיות המשלבת לימודים ופעילות גופנית.
+                <p class=" text_content" style="padding-right: 10%;padding-left: 10%">בית ספר להישגים הוקם
+                    כמיזם סטארט-אפ חינוכי ע"י גיא קורן, אילן ורועי שר.
+                    המיזם מציע לראשונה בישראל תוכניות ייחודיות המשלבת לימודים ופעילות גופנית.
                     הראשונה מבין התוכניות שבית הספר הישגים מציעה נקראת: "להצטיין בכל המגרשים"
-                    "לצטיין בכל המגרשים" - תוכנית לשעות הצהריים המותאמת לתלמידי יסודי במתחם בית הספר, התוכנית נותנת מענה בשלושה תחומים התורמים ומעצבים את הילד, חינוך לערכים, השכלה,כלים ללמידה ופעילות גופנית.  הפעילות מועברת ע"י מורים, מדריכים ומאמני ספורט מקצועיים.
+                    "לצטיין בכל המגרשים" - תוכנית לשעות הצהריים המותאמת לתלמידי יסודי במתחם בית הספר, התוכנית נותנת מענה
+                    בשלושה תחומים התורמים ומעצבים את הילד, חינוך לערכים, השכלה,כלים ללמידה ופעילות גופנית. הפעילות
+                    מועברת ע"י מורים, מדריכים ומאמני ספורט מקצועיים.
                 </p>
 
             </div>
