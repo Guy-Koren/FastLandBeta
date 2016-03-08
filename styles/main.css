@@ -46,7 +46,7 @@
 
 .plans {
     margin-bottom: 0;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
     padding-top: 5vh;
     background-color: #263238;
 }
@@ -187,8 +187,12 @@ body .main_wrapper {
     height: auto;
 }
 
-h3 {
-    text-align: right;
-    align-content: center;
-    direction: rtl;
+#scrolling{
+    width: 100%!important;
+    overflow-x: scroll;
+    list-style-type: none;
+}
+
+.book{
+    width: 10vw;
 }

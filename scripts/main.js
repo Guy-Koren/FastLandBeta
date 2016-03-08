@@ -20,6 +20,16 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
     };
     $scope.braunches = [
         {
+            text: "תל אביב",
+            title: true
+        },
+        {
+            text: "סניף המשתלה אלי תבין 8"
+        },
+        {
+            text: "עירוני יד - בקרוב"
+        },
+        {
             text: "ראשון לציון",
             title: true
 
@@ -34,16 +44,6 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
             text: "מרכז התדר: הרצל 136"
         },
         {
-            text: "תל אביב",
-            title: true
-        },
-        {
-            text: "סניף המשתלה אלי תבין 8"
-        },
-        {
-            text: "עירוני יד - בקרוב"
-        },
-        {
             text: "חולון",
             title: true
         },
@@ -51,7 +51,7 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
             text: "בית ספר הישגים: חזית חמש 2"
         },
         {
-            text: "בית ספר הישגים: מלחמת ששת הימים 23"
+            text: "בית ספר הישגים: ששת הימים 23"
         }
     ];
     $scope.books = [1, 2, 3, 4, 5, 8, 9, 10];
@@ -100,4 +100,34 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
             icon: "man"
         }
     ]
+
+
+    $scope.showAdvanced = function (ev) {
+        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
+
+        $mdDialog.show({
+                templateUrl: 'views/dialog.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose: true,
+                fullscreen: useFullScreen
+            })
+            .then(function (answer) {
+                $scope.status = 'You said the information was "' + answer + '".';
+            }, function () {
+                $scope.status = 'You cancelled the dialog.';
+            });
+
+
+        $scope.$watch(function () {
+            return $mdMedia('xs') || $mdMedia('sm');
+        }, function (wantsFullScreen) {
+            $scope.customFullscreen = (wantsFullScreen === true);
+        });
+
+    };
+    $scope.showAdvanced(null);
+    setTimeout(function(){
+        $mdDialog.cancel();
+    },4000)
 });

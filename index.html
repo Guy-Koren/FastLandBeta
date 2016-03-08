@@ -56,7 +56,8 @@
             <div layout="column" layout-align="start start" dir="rtl"
                  style="width: 30% !important;max-height: 420px;overflow: visible;">
                 <h1 dir="rtl">סניפים</h1>
-                <h3 ng-repeat="braunch in braunches" class="no_margins_h3" ng-class="{'braunch_title':braunch.title}">{{braunch.text}}</h3>
+                <h3 ng-repeat="braunch in braunches" class="no_margins_h3" ng-class="{'braunch_title':braunch.title}">
+                    {{braunch.text}}</h3>
             </div>
         </div>
 
@@ -74,14 +75,14 @@
         </div>
 
         <div class="section plans">
-            <div layout="column" layout-align="start center">
+            <div layout="column" layout-align="end center">
                 <h1 style=" color: #8B8E90">תוכנית לחטיבה ותיכון</h1>
             </div>
             <div layout="row" layout-align="center start">
                 <div style="width: 50%">
                     <md-grid-list
                             md-cols="2"
-                            md-row-height="2:2"
+                            md-row-height="3:2"
                             md-gutter="12px" md-gutter-gt-sm="8px">
                         <md-grid-tile class="plans_item" ng-repeat="plan in plans2">
                             <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
@@ -96,13 +97,13 @@
 
         <div class="section plans_pre">
             <div layout="column" layout-align="start center">
-                <h1 style="color: #B1A057">תוכנית לחטיבה ותיכון</h1>
+                <h1 style="color: #B1A057">תוכנית ליסודי</h1>
             </div>
             <div layout="row" layout-align="center start">
                 <div style="width: 80%">
                     <md-grid-list
                             md-cols="3"
-                            md-row-height="2:2"
+                            md-row-height="3:2"
                             md-gutter="12px" md-gutter-gt-sm="8px">
                         <md-grid-tile class="plans_item" ng-repeat="plan in plans">
                             <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
@@ -120,13 +121,12 @@
             <div layout="column" layout-align="start center">
                 <h1 class="red_title">גלריית ספרים</h1>
             </div>
-            <md-grid-list
-                    md-cols="4"
-                    md-row-height="4:5.5">
-                <md-grid-tile class="plans_item" ng-repeat="book in books">
-                    <img ng-src="img/{{book}}.png" style="width: 95%">
-                </md-grid-tile>
-            </md-grid-list>
+
+            <div id="scrolling" layout="row" >
+                <ul ng-repeat="book in books" style="list-style-type: none;padding-right: 2vw">
+                    <li><img class="book" ng-src="img/{{book}}.png"></li>
+                </ul>
+            </div>
         </div>
 
         <div class="section stuff red_background">
@@ -173,5 +173,6 @@
 <script src="bower_components/angular-material/angular-material.js"></script>
 <script src="scripts/main.js"></script>
 <script src="directives/bar/bar.js"></script>
+
 </body>
 </html>
