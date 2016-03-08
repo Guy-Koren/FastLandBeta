@@ -14,6 +14,10 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
         $scope.bigScreen = big;
     });
     $scope.extra_about = false;
+    $scope.bagrut_extra = false;
+    $scope.toggleBagrutExtra = function () {
+        $scope.bagrut_extra = !$scope.bagrut_extra
+    };
     $scope.toggleAboutExtra = function () {
         console.log("click")
         $scope.extra_about = !$scope.extra_about;
@@ -286,12 +290,14 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
         $mdDialog.cancel();
     }, 4000)
 
-    $scope.showListBottomSheet = function() {
+    $scope.showListBottomSheet = function () {
         $scope.alert = '';
         $mdBottomSheet.show({
             templateUrl: 'views/bottom-sheet-list-template.html'
-        }).then(function(clickedItem) {
+        }).then(function (clickedItem) {
             $scope.alert = clickedItem['name'] + ' clicked!';
         });
     };
+
+
 });

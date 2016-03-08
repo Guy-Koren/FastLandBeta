@@ -65,13 +65,33 @@
             <div layout="column" layout-align="start center">
                 <h1 class="yellow_title">השלמת בגרויות</h1>
             </div>
-            <div layout="row" layout-align="center center">
-                <p class="white_text text_content">השלמת בגרויות B.A.BLE – השלמת בגרויות בכיתות קטנות עם צוות מורים
-                    מעולה הנותן יחס אישי לכל תלמיד </p>
+            <div layout="column" layout-align="center center" class="padded_content">
+                <p class="white_text text_content">
+                    השלמת בגרות במתמטיקה קיץ 2016
+                    <br>
+                    שני מסלולים ייחודים ללמידה לבגרות בזמן קצר ומקסימום תוצאות, קבוצות למידה קטנות בשיטה ייחודית.
+                </p>
+
+                <p class="white_text text_content" ng-show="bagrut_extra">
+                    מסלול שני המועדים (תחילת קורס 20.3) : למידה של 80 שעות עם טובי המורים בארץ פלוס מרתון לפני הבגרות עם
+                    גיא לקראת המועד המועד 23.5.2016. עם הזדמנות לגשת גם למועד הנוסף כ 7-שבועות אחרי המועד הראשון כאשר
+                    בוחרים את הציון הגבוה מבין שני המועדים.
+                    <br>
+                    במועד הקרוב הפתחו קבוצות ל-3 יחידות ו-4 יחידות
+                    <br><br>
+                    מסלול מועד ב' (תחילת קורס 1.4): למידה של 120 שעות עד למועד הבגרות השני עם טובי המורים פלוס מרתון עם
+                    גיא.
+                    <br>
+                    במועד הקרוב הפתחו קבוצות ל-3 יחידות, 4 יחידות ו-5 יחידות
+                    <br>
+                    מספר המקומות בכל קבוצה הוא 16 תלמידים
+                </p>
+
+                <div layout="row" layout-align="center start">
+                    <a href="" class="white_anchor read_more"  ng-click="toggleBagrutExtra()">קרא עוד</a>
+                </div>
             </div>
-            <div layout="row" layout-align="center start">
-                <a href="" class="white_anchor read_more">קרא עוד</a>
-            </div>
+
         </div>
 
         <div class="section plans">
