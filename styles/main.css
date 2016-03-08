@@ -1,6 +1,6 @@
 .logo {
     height: 20vh;
-    min-width: 18vh !important;
+
 }
 
 .tab {
@@ -32,7 +32,7 @@
 }
 
 .branches {
-    padding-right: 4%;
+    padding-right: 1%;
     height: 420px;
     margin-bottom: 0
 }
