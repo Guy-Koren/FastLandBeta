@@ -122,7 +122,7 @@
                 <h1 class="red_title">גלריית ספרים</h1>
             </div>
 
-            <div id="scrolling" layout="row" >
+            <div id="scrolling" layout="row">
                 <ul ng-repeat="book in books" style="list-style-type: none;padding-right: 2vw">
                     <li><img class="book" ng-src="img/{{book}}.png"></li>
                 </ul>
@@ -133,16 +133,19 @@
             <div layout="column" layout-align="start center">
                 <h1 class="yellow_title">חומרי למידה</h1>
             </div>
-            <div layout="row" layout-align="center center">
-                <p class="white_text text_content" style="padding-left: 10%;padding-right: 10%">kamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj
-                    vnsjdkanjvhsaduibvkamsdklfdsklajklvnjslfj vnsjdkanjvhsaduibv</p>
-            </div>
-            <div layout="row" layout-align="center start">
-                <a href="#" class="white_anchor read_more">קרא עוד</a>
+            <div layout="row" layout-align="center center" layout-wrap>
+                <md-whiteframe class="md-whiteframe-5dp material_item_wrapper" flex="25" layout="column"
+                               ng-repeat="thing in stuff">
+                    <md-whiteframe class="md-whiteframe-3dp material_item_header" layout layout-align="center center">
+                        <h1 class="material_item_header_title">{{thing.grade}}</h1>
+                    </md-whiteframe>
+                    <ul class="scroll_material_item" >
+                        <li align="right" ng-repeat="material in thing.material" class="material_item_scroll_item ">
+                            <a ng-href="{{material.link}}">{{material.title}}</a>
+                        </li>
+                    </ul>
+                </md-whiteframe>
+                <br>
             </div>
         </div>
 
