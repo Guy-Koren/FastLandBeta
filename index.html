@@ -48,13 +48,13 @@
             </div>
         </div>
         <hr class="cool_hr" flex/>
-        <div class="section branches" layout="row" layout-align="start start" style="height: 420px; margin-bottom: 0">
+        <div class="section branches" layout="row" layout-align="start start">
             <!--   <iframe src="https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98" width="70%"
                        height="320"></iframe>-->
             <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')"
-                 src="img/map.png" style="width: 70% !important;height: 100%;  object-fit: cover;">
+                 src="img/map.png" class="branches_map_image">
             <div layout="column" layout-align="start start" dir="rtl"
-                 style="width: 30% !important;max-height: 420px;overflow: visible;">
+                 class="braunches_wrapper">
                 <h1 dir="rtl">סניפים</h1>
                 <h3 ng-repeat="braunch in braunches" class="no_margins_h3" ng-class="{'braunch_title':braunch.title}">
                     {{braunch.text}}</h3>
@@ -79,19 +79,26 @@
                 <h1 style=" color: #8B8E90">תוכנית לחטיבה ותיכון</h1>
             </div>
             <div layout="row" layout-align="center start">
-                <div style="width: 50%">
+                <div style="width: 80%">
                     <md-grid-list
+                            ng-show="bigScreen"
                             md-cols="3"
                             md-row-height="2:2"
                             md-gutter="12px" md-gutter-gt-sm="8px">
                         <md-grid-tile class="plans_item" ng-repeat="plan in plans2">
-                            <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
+                            <md-icon ng-show="bigScreen" md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
                                      class="plans_item_img"></md-icon>
                             <md-grid-tile-footer layout-align="center center">
                                 <h3>{{plan.text}}</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
+                    </md-grid-list>
+                    <div ng-show="!bigScreen" ng-repeat="plan in plans2" style="width: 100%" layout="column"
+                         layout-align="center center">
+                        <h3 align="center" flex="25" class="white_text">{{plan.text}}</h3>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -99,22 +106,32 @@
             <div layout="column" layout-align="start center">
                 <h1 style="color: #B1A057">תוכנית ליסודי</h1>
             </div>
-            <div layout="row" layout-align="center start">
-                <div style="width: 80%">
+            <div layout="column" layout-align="center center">
+                <div style="width: 80%"
+                >
                     <md-grid-list
+                            ng-show="bigScreen"
                             md-cols="3"
                             md-row-height="3:2"
                             md-gutter="12px" md-gutter-gt-sm="8px">
                         <md-grid-tile class="plans_item" ng-repeat="plan in plans">
-                            <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
-                                     class="plans_item_img"></md-icon>
+                            <div>
+                                <md-icon md-svg-src="img/{{plan.icon}}.svg" style="color: #ffffff;"
+                                         class="plans_item_img"></md-icon>
+                            </div>
                             <md-grid-tile-footer layout-align="center center">
                                 <h3>{{plan.text}}</h3>
                             </md-grid-tile-footer>
                         </md-grid-tile>
                     </md-grid-list>
+
+                    <div ng-show="!bigScreen" ng-repeat="plan in plans" style="width: 100%" layout="column"
+                         layout-align="center center">
+                        <h3 align="center" flex="25" class="white_text">{{plan.text}}</h3>
+                    </div>
                 </div>
             </div>
+
         </div>
 
         <div class="section gallery gray_background">
@@ -134,12 +151,13 @@
                 <h1 class="yellow_title">חומרי למידה</h1>
             </div>
             <div layout="row" layout-align="center center" layout-wrap>
-                <md-whiteframe class="md-whiteframe-5dp material_item_wrapper" flex="25" layout="column"
+                <md-whiteframe class="md-whiteframe-5dp material_item_wrapper" flex-xs="100" flex-sm="40"
+                               flex-gt-sm="25" layout="column"
                                ng-repeat="thing in stuff">
                     <md-whiteframe class="md-whiteframe-3dp material_item_header" layout layout-align="center center">
                         <h1 class="material_item_header_title">{{thing.grade}}</h1>
                     </md-whiteframe>
-                    <ul class="scroll_material_item" >
+                    <ul class="scroll_material_item no_bullet_list">
                         <li align="right" ng-repeat="material in thing.material" class="material_item_scroll_item ">
                             <a ng-href="{{material.link}}">{{material.title}}</a>
                         </li>

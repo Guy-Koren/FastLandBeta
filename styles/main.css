@@ -32,8 +32,21 @@
 }
 
 .branches {
-    margin-bottom: 5px;
     padding-right: 4%;
+    height: 420px;
+    margin-bottom: 0
+}
+
+.branches_wrapper {
+    width: 30% !important;
+    height: 420px !important;
+    overflow-y: scroll;
+}
+
+.branches_map_image {
+    width: 70% !important;
+    height: 100%;
+    object-fit: cover;
 }
 
 .profile {
@@ -177,9 +190,8 @@ body .main_wrapper {
 
 .plans_item_img {
     color: white;
-    width: 10vh;
-    height: 10vh;
-
+    width: 60px;
+    height: 60px;
 }
 
 .grid_3 {
@@ -190,7 +202,7 @@ body .main_wrapper {
 #scrolling {
     width: 100% !important;
     overflow-x: scroll;
-    list-style-type: none;
+
 }
 
 .book {
@@ -200,7 +212,6 @@ body .main_wrapper {
 .scroll_material_item {
     height: 65%;
     overflow-y: scroll;
-    list-style-type: none;
     padding-right: 4%;
 }
 
@@ -218,14 +229,24 @@ body .main_wrapper {
 .material_item_wrapper {
     background-color: white;
     height: 40vh;
-    margin-right: 5vw;
-    margin-bottom: 4vh;
-
+    margin-left: 2vw;
+    margin-right: 10px;
+    margin-bottom: 2vh;
 }
 
 .material_item_scroll_item {
     margin-bottom: 2vh
 }
-.material_item_header_title{
+
+.material_item_header_title {
     color: white;
+}
+
+.no_bullet_list {
+    list-style-type: none;
+}
+
+.padded_content {
+    padding-left: 10%;
+    padding-right: 10%;
 }
