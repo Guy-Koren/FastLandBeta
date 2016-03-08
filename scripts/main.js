@@ -92,12 +92,8 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
             icon: "business"
         },
         {
-            text: "הכנה לבגרויות",
+            text: "הכנה לבגרויות/מרתונים",
             icon: "document"
-        },
-        {
-            text: "מרתונים",
-            icon: "man"
         }
     ]
 
