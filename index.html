@@ -88,7 +88,7 @@
                 </p>
 
                 <div layout="row" layout-align="center start">
-                    <a href="" class="white_anchor read_more"  ng-click="toggleBagrutExtra()">קרא עוד</a>
+                    <a href="" class="white_anchor read_more" ng-click="toggleBagrutExtra()">קרא עוד</a>
                 </div>
             </div>
 
@@ -207,14 +207,12 @@
             </div>
         </div>
     </div>
-    <
-    <md-fab-speed-dial class="fab">
-        <md-fab-trigger>
-            <md-button aria-label="info" class="md-fab md-warn">
-                <md-icon md-svg-src="img/info.svg"></md-icon>
-            </md-button>
-        </md-fab-trigger>
-    </md-fab-speed-dial>
+
+
+    <md-button aria-label="info" class="md-fab md-warn fab" ng-click="showListBottomSheet()" >
+        <md-icon md-svg-src="img/info.svg"></md-icon>
+    </md-button>
+
 </div>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>

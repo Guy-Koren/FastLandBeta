@@ -293,11 +293,8 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
     $scope.showListBottomSheet = function () {
         $scope.alert = '';
         $mdBottomSheet.show({
-            templateUrl: 'views/bottom-sheet-list-template.html'
-        }).then(function (clickedItem) {
-            $scope.alert = clickedItem['name'] + ' clicked!';
-        });
+            templateUrl: 'views/info_bottom.html'
+        })
     };
-
 
 });
