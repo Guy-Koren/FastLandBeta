@@ -175,15 +175,15 @@
             </div>
 
             <div layout="row">
-                <md-button class="md-fab md-fab-scroll" ng-click="scrollBooksRight()">
+                <md-button class="md-fab md-fab-scroll" ng-class="{'md-fab-scroll-small':xsmall}" ng-click="scrollBooksRight()">
                     <md-icon md-svg-src="img/arrow-left.svg"></md-icon>
                 </md-button>
                 <div id="scrolling" layout="row">
                     <ul ng-repeat="book in books" style="list-style-type: none;padding-right: 1vw">
-                        <li><img class="book" ng-src="img/{{book}}.png"></li>
+                        <li><img class="book" ng-class="{'book_small':xsmall}" ng-src="img/{{book}}.png"></li>
                     </ul>
                 </div>
-                <md-button class="md-fab md-fab-scroll rotate_180"  ng-click="scrollBooksLeft()">
+                <md-button class="md-fab md-fab-scroll rotate_180" ng-class="{'md-fab-scroll-small':xsmall}" ng-click="scrollBooksLeft()">
                     <md-icon md-svg-src="img/arrow-left.svg"></md-icon>
                 </md-button>
             </div>

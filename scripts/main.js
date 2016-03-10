@@ -8,11 +8,19 @@ var app = angular.module('GuyKoren', ['ngMaterial']).config(function ($mdTheming
 });
 
 app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $mdMedia) {
+
     $scope.$watch(function () {
         return $mdMedia('gt-sm');
     }, function (big) {
         $scope.bigScreen = big;
     });
+
+    $scope.$watch(function () {
+        return $mdMedia('xs');
+    }, function (big) {
+        $scope.xsmall = big;
+    });
+
     $scope.extra_about = false;
     $scope.bagrut_extra = false;
     $scope.toggleBagrutExtra = function () {
@@ -285,10 +293,6 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
         });
 
     };
-    $scope.showAdvanced(null);
-    setTimeout(function () {
-        $mdDialog.cancel();
-    }, 4000)
 
     $scope.showListBottomSheet = function () {
         $scope.alert = '';
@@ -297,10 +301,16 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
         })
     };
 
-    $scope.scrollBooksLeft = function(){
+    $scope.scrollBooksLeft = function () {
         document.getElementById('scrolling').scrollLeft += 400;
     };
-    $scope.scrollBooksRight = function(){
+    $scope.scrollBooksRight = function () {
         document.getElementById('scrolling').scrollLeft -= 400;
+    };
+    if ($mdMedia('gt-sm')) {
+        $scope.showAdvanced(null);
+        setTimeout(function () {
+            $mdDialog.cancel();
+        }, 4000);
     }
 });

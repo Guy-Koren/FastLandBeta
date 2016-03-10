@@ -216,6 +216,10 @@ body .main_wrapper {
     height: 286px
 }
 
+.book_small{
+    height: 140px;
+}
+
 .scroll_material_item {
     height: 65%;
     overflow-y: scroll;
@@ -270,4 +274,7 @@ body .main_wrapper {
 
 .md-fab-scroll{
     margin-top: 143px;
+}
+.md-fab-scroll-small{
+    margin-top: 71px;
 }
