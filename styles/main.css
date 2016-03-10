@@ -49,6 +49,10 @@
     object-fit: cover;
 }
 
+.branches_wrapper_big_screen{
+    padding-right: 5%;
+}
+
 .profile {
     width: 150px;;
 }

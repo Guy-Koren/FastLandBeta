@@ -54,10 +54,12 @@
             <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')"
                  src="img/map.png" class="branches_map_image">
             <div layout="column" layout-align="start start" dir="rtl"
-                 class="branches_wrapper">
+                 class="branches_wrapper" >
                 <h1 dir="rtl">סניפים</h1>
+                <div ng-class="{'branches_wrapper_big_screen' : bigScreen}">
                 <h3 ng-repeat="braunch in braunches" class="no_margins_h3" ng-class="{'braunch_title':braunch.title}">
                     {{braunch.text}}</h3>
+                </div>
             </div>
         </div>
 
