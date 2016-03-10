@@ -54,11 +54,12 @@
             <img href="#" onclick="window.open('https://www.google.com/maps/d/embed?mid=zw8WmSnoSrYE.k0FAZg8Q-A98')"
                  src="img/map.png" class="branches_map_image">
             <div layout="column" layout-align="start start" dir="rtl"
-                 class="branches_wrapper" >
+                 class="branches_wrapper">
                 <h1 dir="rtl">סניפים</h1>
                 <div ng-class="{'branches_wrapper_big_screen' : bigScreen}">
-                <h3 ng-repeat="braunch in braunches" class="no_margins_h3" ng-class="{'braunch_title':braunch.title}">
-                    {{braunch.text}}</h3>
+                    <h3 ng-repeat="braunch in braunches" class="no_margins_h3"
+                        ng-class="{'braunch_title':braunch.title}">
+                        {{braunch.text}}</h3>
                 </div>
             </div>
         </div>
@@ -173,10 +174,18 @@
                 <h1 class="red_title">גלריית ספרים</h1>
             </div>
 
-            <div id="scrolling" layout="row">
-                <ul ng-repeat="book in books" style="list-style-type: none;padding-right: 2vw">
-                    <li><img class="book" ng-src="img/{{book}}.png"></li>
-                </ul>
+            <div layout="row">
+                <md-button class="md-fab md-fab-scroll" ng-click="scrollBooksRight()">
+                    <md-icon md-svg-src="img/arrow-left.svg"></md-icon>
+                </md-button>
+                <div id="scrolling" layout="row">
+                    <ul ng-repeat="book in books" style="list-style-type: none;padding-right: 2vw">
+                        <li><img class="book" ng-src="img/{{book}}.png"></li>
+                    </ul>
+                </div>
+                <md-button class="md-fab md-fab-scroll rotate_180" ng-click="scrollBooksLeft()">
+                    <md-icon md-svg-src="img/arrow-left.svg"></md-icon>
+                </md-button>
             </div>
         </div>
 
@@ -206,7 +215,7 @@
                 <h1 class="red_title">בית ספר להישגים</h1>
             </div>
 
-            <md-content layout="row" layout-align="center center" >
+            <md-content layout="row" layout-align="center center">
 
                 <img src="img/school.png" style="padding-right: 6%">
                 <p style="width: 50%;padding-left: 6%;font-size: large" dir="rtl">בית ספר להישגים הוקם

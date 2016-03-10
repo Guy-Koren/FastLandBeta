@@ -297,4 +297,10 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
         })
     };
 
+    $scope.scrollBooksLeft = function(){
+        document.getElementById('scrolling').scrollLeft += 400;
+    };
+    $scope.scrollBooksRight = function(){
+        document.getElementById('scrolling').scrollLeft -= 400;
+    }
 });
