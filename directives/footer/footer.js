@@ -76,13 +76,14 @@ app.controller('FooterController', function ($scope, $mdDialog, $mdBottomSheet, 
                     href: ""
                 },
                 {
-                    text: "חוגים",
-                    href: ""
-                },
-                {
                     text: "פסח סקול",
                     href: ""
                 },
+                {
+                    text: "חוגים",
+                    href: ""
+                },
+
                 {
                     text: "קיץ",
                     href: ""
