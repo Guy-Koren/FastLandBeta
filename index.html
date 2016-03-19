@@ -175,7 +175,8 @@
             </div>
 
             <div layout="row">
-                <md-button class="md-fab md-fab-scroll" ng-class="{'md-fab-scroll-small':xsmall}" ng-click="scrollBooksRight()">
+                <md-button class="md-fab md-fab-scroll" ng-class="{'md-fab-scroll-small':xsmall}"
+                           ng-click="scrollBooksRight()">
                     <md-icon md-svg-src="img/arrow-left.svg"></md-icon>
                 </md-button>
                 <div id="scrolling" layout="row">
@@ -183,7 +184,8 @@
                         <li><img class="book" ng-class="{'book_small':xsmall}" ng-src="img/{{book}}.png"></li>
                     </ul>
                 </div>
-                <md-button class="md-fab md-fab-scroll rotate_180" ng-class="{'md-fab-scroll-small':xsmall}" ng-click="scrollBooksLeft()">
+                <md-button class="md-fab md-fab-scroll rotate_180" ng-class="{'md-fab-scroll-small':xsmall}"
+                           ng-click="scrollBooksLeft()">
                     <md-icon md-svg-src="img/arrow-left.svg"></md-icon>
                 </md-button>
             </div>
@@ -234,6 +236,7 @@
 
         </div>
     </div>
+    <footer ></footer>
 
 
     <md-button aria-label="info" class="md-fab md-warn fab" ng-click="showListBottomSheet()">
@@ -247,6 +250,7 @@
 <script src="bower_components/angular-material/angular-material.js"></script>
 <script src="scripts/main.js"></script>
 <script src="directives/bar/bar.js"></script>
+<script src="directives/footer/footer.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,12 @@
+<div class="footer-wrapper section md-whiteframe-10dp" ng-controller="FooterController" layout="row" layout-align="center start">
+    <div layout="column" ng-repeat="school in map" layout-align="start center">
+        <md-list>
+            <md-subheader align="center">
+                {{school.title}}
+            </md-subheader>
+            <md-list-item ng-repeat="option in school.options" layout layout-align="center">
+                <a href="" style="color: black;     text-decoration: none;"><h3 align="center">{{option.text}}</h3></a>
+            </md-list-item>
+        </md-list>
+    </div>
+</div>
