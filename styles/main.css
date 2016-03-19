@@ -117,6 +117,10 @@
     padding-top: 5vh;
 }
 
+.fasttest-wrapper p{
+    font-size: large;
+}
+
 .text_content {
     text-align: center;
     direction: rtl;
