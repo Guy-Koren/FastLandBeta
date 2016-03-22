@@ -6,8 +6,8 @@ var app = angular.module('GuyKoren', ['ngMaterial']).config(function ($mdTheming
     //create yr own palette
 
 });
-
 app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $mdMedia) {
+    var popup = false;
 
     $scope.$watch(function () {
         return $mdMedia('gt-sm');
@@ -308,9 +308,11 @@ app.controller('AppController', function ($scope, $mdDialog, $mdBottomSheet, $md
         document.getElementById('scrolling').scrollLeft -= 400;
     };
     if ($mdMedia('gt-sm')) {
-        $scope.showAdvanced(null);
-        setTimeout(function () {
-            $mdDialog.cancel();
-        }, 4000);
+        if(popup) {
+            $scope.showAdvanced(null);
+            setTimeout(function () {
+                $mdDialog.cancel();
+            }, 4000);
+        }
     }
 });
