@@ -16,11 +16,11 @@
 
 <div layout-align="start center" layout="column" style="overflow: visible" id="main_wrapper">
     <bar ng-show="bigScreen"></bar>
-    <div class="content md-whiteframe-16dp animated slideInUp"
+    <div class="content md-whiteframe-16dp animated slideInUp" ng-show="location.path() == '/main'"
          ng-style="bigScreen ? {'margin-top': '22vh'}:{'margin-top': '0'}">
         <img src="img/header.png" class="section banner">
         <div class="section about" layout-align="start center" layout="row" dir="rtl">
-            <img src="http://korenguy.com/wp-content/uploads/2013/03/%D7%92%D7%99%D7%90-%D7%A7%D7%95%D7%A8%D7%9F1.png"
+            <img src="img/guyguynew.PNG"
                  class="profile">
             <br>
             <div layout="column" class="about_content">
@@ -66,13 +66,14 @@
 
         <div class="section bagrut  bluish_gray_background" style="margin-top: 0">
             <div layout="column" layout-align="start center">
-                <h1 class="white_text">השלמת בגרויות</h1>
+                <h1 class="white_text">השלמת בגרויות במתמטיקה קיץ 2016</h1>
             </div>
             <div layout-align="center end" class="padded_content">
                 <h2 class="white_text" align="right" style="text-decoration: underline;padding-bottom: 0">
-                    תחילת קורס 1.4
+                    תחילת קורס 15.4
                 </h2>
-                <p dir="rtl" class="white_text" layout layout-align="start start" align="right" style="padding-top: 0">  למידה של 120 שעות עד למועד הבגרות השני עם טובי המורים פלוס מרתון עם
+                <p dir="rtl" class="white_text" layout layout-align="start start" align="right" style="padding-top: 0">
+                    למידה של 120 שעות עד למועד הבגרות השני עם טובי המורים פלוס מרתון עם
                     גיא.
                     <br>
                     במועד הקרוב הפתחו קבוצות ל-3 יחידות, 4 יחידות ו-5 יחידות
@@ -239,9 +240,9 @@
 
         </div>
     </div>
+    <basic-page class="content md-whiteframe-16dp animated slideInUp" ng-show="location.path() == '/material'"
+                ng-style="bigScreen ? {'margin-top': '22vh'}:{'margin-top': '0'}"></basic-page>
     <footer ng-show="bigScreen"></footer>
-
-
     <md-button aria-label="info" class="md-fab md-warn fab" ng-click="showListBottomSheet()">
         <md-icon md-svg-src="img/info.svg"></md-icon>
     </md-button>
@@ -254,6 +255,7 @@
 <script src="scripts/main.js"></script>
 <script src="directives/bar/bar.js"></script>
 <script src="directives/footer/footer.js"></script>
+<script src="directives/basic-page/BasicPage.js"></script>
 
 </body>
 </html>

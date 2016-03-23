@@ -6,11 +6,11 @@ app.directive('bar', function () {
         templateUrl: 'directives/bar/bar.html'
     };
 });
-app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $log) {
+app.controller('BarController', function ($location, $scope, $mdDialog, $mdBottomSheet, $log, $rootScope) {
     $scope.scrollTo = function (id) {
         document.getElementsByClassName(id)[0].scrollIntoView();
     };
-
+    $scope.location = $location;
     $scope.tabs = [
         {
             title: "אודות",
@@ -31,7 +31,8 @@ app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $lo
             title: "דרושים"
         },
         {
-            icon: true
+            icon: true,
+            href: "main"
         },
         /*   {
          title: "השלמת בגרויות"
@@ -78,10 +79,17 @@ app.controller('BarController', function ($scope, $mdDialog, $mdBottomSheet, $lo
             break
         }
     }
-    console.log($scope.tabs, $scope.tabs2)
+    console.log($scope.tabs, $scope.tabs2);
     setTimeout(function () {
         $scope.$apply();
-    }, 150)
-
+    }, 150);
+    $scope.followClick = function (tab) {
+        if (tab.href == null) {
+            if(tab.id != null) $scope.scrollTo(tab.id);
+        }
+        else {
+            $location.path(tab.href);
+        }
+    }
 })
 ;
