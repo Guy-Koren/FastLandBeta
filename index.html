@@ -57,9 +57,9 @@
                  class="branches_wrapper">
                 <h1 dir="rtl">סניפים</h1>
                 <div ng-class="{'branches_wrapper_big_screen' : bigScreen}">
-                    <h3 ng-repeat="braunch in braunches" class="no_margins_h3"
-                        ng-class="{'braunch_title':braunch.title}">
-                        <span ng-show="!braunch.title">- </span>{{braunch.text}}</h3>
+                    <h3 ng-repeat="branch in branches" class="no_margins_h3"
+                        ng-class='{"branch_title":branch.title}'>
+                        <span ng-show="!branch.title">- </span>{{branch.text}}</h3>
                 </div>
             </div>
         </div>

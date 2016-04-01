@@ -35,7 +35,7 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
         console.log("click")
         $scope.extra_about = !$scope.extra_about;
     };
-    $scope.braunches = [
+    $scope.branches = [
         {
             text: "תל אביב",
             title: true
