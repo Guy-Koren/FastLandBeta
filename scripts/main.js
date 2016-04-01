@@ -7,7 +7,7 @@ var app = angular.module('GuyKoren', ['ngMaterial']).config(function ($mdTheming
 
 });
 app.controller('AppController', function ($scope, $location, $mdDialog, $mdBottomSheet, $mdMedia, $log) {
-    var popup = false;
+    var popup = true;
     $log.debug($location.path());
 
     if ($location.path() == "") {
@@ -275,9 +275,10 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
 
 
     $scope.showAdvanced = function (ev) {
-        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && $scope.customFullscreen;
+        var useFullScreen = true
 
         $mdDialog.show({
+                controller: DialogController,
                 templateUrl: 'views/dialog.html',
                 parent: angular.element(document.body),
                 targetEvent: ev,
@@ -317,8 +318,19 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
             $scope.showAdvanced(null);
             setTimeout(function () {
                 $mdDialog.cancel();
-            }, 4000);
+            }, 25000);
         }
     }
 
 });
+function DialogController($scope, $mdDialog) {
+    $scope.hide = function() {
+        $mdDialog.hide();
+    };
+    $scope.cancel = function() {
+        $mdDialog.cancel();
+    };
+    $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+    };
+}
