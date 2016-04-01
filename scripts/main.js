@@ -31,6 +31,10 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
     $scope.toggleBagrutExtra = function () {
         $scope.bagrut_extra = !$scope.bagrut_extra
     };
+    $scope.toggleASchoolExtra = function () {
+        $scope.aSchool_extra = !$scope.aSchool_extra
+    };
+
     $scope.toggleAboutExtra = function () {
         console.log("click")
         $scope.extra_about = !$scope.extra_about;
