@@ -37,6 +37,9 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
     $scope.toggleFastestExtra= function () {
         $scope.fastest_extra= !$scope.fastest_extra
     };
+    $scope.toggleAdExtra= function () {
+        $scope.adExtra = !$scope.adExtra
+    };
     $scope.toggleAboutExtra = function () {
         console.log("click")
         $scope.extra_about = !$scope.extra_about;
