@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="section ad  gold_background" style="margin-top: 0">
+        <div class="section ad  red_background" style="margin-top: 0">
             <div layout="column" layout-align="start center">
                 <h1 align="center" class="white_text"> PESACH SCHOOL</h1>
             </div>
@@ -341,6 +341,27 @@
     <md-button aria-label="info" class="md-fab md-warn fab" ng-click="showListBottomSheet()">
         <md-icon md-svg-src="img/info.svg"></md-icon>
     </md-button>
+
+    <md-fab-speed-dial md-direction="up" aria-label="info"
+                       class="md-scale fab">
+        <md-fab-trigger>
+            <md-button aria-label="menu" class="md-fab md-warn">
+                <md-icon md-svg-src="img/info.svg"></md-icon>
+            </md-button>
+        </md-fab-trigger>
+        <md-fab-actions>
+            <md-button aria-label="Phone" class="md-fab md-raised md-mini">
+                <a href="tel:+0722-439-439"><md-icon md-svg-src="img/phone.svg" aria-label="Phone Number"></md-icon></a>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+                <a href="https://www.facebook.com/גיא-קורן-מרכזי-למידה-151417915020746"><md-icon md-svg-src="img/facebook.svg" aria-label="Facebook"></md-icon></a>
+            </md-button>
+            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+                <a href="https://www.instagram.com/guy_koren_academy/"><md-icon md-svg-src="img/instagram.svg" aria-label="Instagram"></md-icon></a>
+            </md-button>
+        </md-fab-actions>
+    </md-fab-speed-dial>
+
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
