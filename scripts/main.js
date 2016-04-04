@@ -4,6 +4,9 @@
 var app = angular.module('GuyKoren', ['ngMaterial']).config(function ($mdThemingProvider) {
     // Extend the red theme with a few different colors
     //create yr own palette
+    $mdThemingProvider.theme('default')
+        .primaryPalette('blue')
+        .accentPalette('red');
 
 });
 app.controller('AppController', function ($scope, $location, $mdDialog, $mdBottomSheet, $mdMedia, $log) {
