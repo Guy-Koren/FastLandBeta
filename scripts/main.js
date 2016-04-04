@@ -9,7 +9,7 @@ var app = angular.module('GuyKoren', ['ngMaterial']).config(function ($mdTheming
         .accentPalette('red');
 
 });
-app.controller('AppController', function ($scope, $location, $mdDialog, $mdBottomSheet, $mdMedia, $log) {
+app.controller('AppController', function ($scope, $location, $mdDialog, $mdBottomSheet, $mdMedia, $log, $mdToast) {
     var popup = true;
     $log.debug($location.path());
 
@@ -37,10 +37,10 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
     $scope.toggleASchoolExtra = function () {
         $scope.aSchool_extra = !$scope.aSchool_extra
     };
-    $scope.toggleFastestExtra= function () {
-        $scope.fastest_extra= !$scope.fastest_extra
+    $scope.toggleFastestExtra = function () {
+        $scope.fastest_extra = !$scope.fastest_extra
     };
-    $scope.toggleAdExtra= function () {
+    $scope.toggleAdExtra = function () {
         $scope.adExtra = !$scope.adExtra
     };
     $scope.toggleAboutExtra = function () {
@@ -334,15 +334,29 @@ app.controller('AppController', function ($scope, $location, $mdDialog, $mdBotto
         }
     }
 
+    $scope.showAlert = function (title, text, confirmation) {
+        // Appending dialog to document.body to cover sidenav in docs app
+        // Modal dialogs should fully cover application
+        // to prevent interaction outside of dialog
+        $mdDialog.show(
+            $mdDialog.alert()
+                .parent(angular.element(document.querySelector('#popupContainer')))
+                .clickOutsideToClose(true)
+                .title(title)
+                .textContent(text)
+                .ok(confirmation)
+        );
+    };
+
 });
 function DialogController($scope, $mdDialog) {
-    $scope.hide = function() {
+    $scope.hide = function () {
         $mdDialog.hide();
     };
-    $scope.cancel = function() {
+    $scope.cancel = function () {
         $mdDialog.cancel();
     };
-    $scope.answer = function(answer) {
+    $scope.answer = function (answer) {
         $mdDialog.hide(answer);
     };
 }
