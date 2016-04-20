@@ -11,7 +11,7 @@ var app = angular.module('GuyKoren', ['ngMaterial']).config(function ($mdTheming
 });
 app.controller('AppController', function ($scope, $location, $mdDialog, $mdBottomSheet, $mdMedia, $log, $mdToast) {
     var popup = true;
-    $log.debug($location.path());
+    $log.debug($location.path());   
 
     if ($location.path() == "") {
         $location.path('main');
